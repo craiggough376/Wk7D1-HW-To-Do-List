@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+}
+
+#app {
+  width: 50%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	margin: 20px 0;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+button{
+	padding: 8px;
+	background: black;
+	color: white;
+}
+
+li.priority {
+	border: 2px solid red;
+  color: red;
+}
+
+li.lowPriority {
+	border: 2px solid black;
+}

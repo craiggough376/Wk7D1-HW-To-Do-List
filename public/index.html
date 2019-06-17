@@ -9,16 +9,22 @@
   <script src="./js/bundle.js"></script>
 </head>
 <body>
+<h1>To Do List</h1>
 
 <div id="app">
+
+  <div class="form">
+   <input v-model="newItem" type="text">
+   <input v-model="priority" type="radio" value="true">High</input>
+   <input v-model="priority" type="radio" value="false">low</input>
+   <button v-on:click="saveNewItem()">Save New Item</button>
+  </div>
+
   <ul>
-    <li v-for="(item, index) in todos">
-      <span>{{ item }}</span>
+    <li v-for="(item, index) in todos" :class="item.priority ? 'priority': 'lowPriority'">
+      <span>{{ item.name }}</span>
     </li>
   </ul>
-
-  <input v-model="newItem" type="text">
-  <button v-on:click="saveNewItem()">Save New Item</button>
 
 </div>
 
